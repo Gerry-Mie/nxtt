@@ -1,8 +1,11 @@
-export default function Home() {
+
+export default async function Home() {
+
+
     return (
         <main className="min-h-screen">
             <div className="z-10 w-full  items-center justify-between p-6 shadow-md font-mono text-sm lg:flex">
-                <h1 className='text-xl text-black'>Next Technologies Corp</h1>
+                <h1 className='text-xl'>Next Technologies Corp</h1>
             </div>
 
             <div
