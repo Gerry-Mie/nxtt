@@ -3,6 +3,6 @@ import {LIST_CONTACT_FORM_PATH} from "@/constants/microsoft";
 import {ContactFormFields} from "@/types/contact-form-interface";
 
 
-const contactForm_send = async (fields: ContactFormFields)=> {
+export const contactForm_send = async (fields: ContactFormFields)=> {
    return graph.api(LIST_CONTACT_FORM_PATH+'/items').post({fields})
 }
