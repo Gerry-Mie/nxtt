@@ -12,8 +12,7 @@ export const LOGIN_REQUEST: RedirectRequest = {
         'profile',
         "User.Read",
         //sites
-        'sites.Read',
-        'sites.ReadWrite',
+        'Sites.ReadWrite.All',
         'Group.Read.All',
         'Group.ReadWrite.All'
     ]
