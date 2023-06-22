@@ -15,8 +15,13 @@ export default function RootLayout(props: any) {
         <body className={inter.className}>
         <Provider>
             <div className='w-full'>
+                <div className="z-10 w-full  items-center justify-between p-6 shadow-md font-mono text-sm lg:flex">
+                    <div className='max-w-screen-2xl m-auto w-full px-10'>
+                        <h1 className='text-xl'>Next Technologies Corp</h1>
+                    </div>
+                </div>
                 <div className='max-w-screen-2xl m-auto'>
-                {props.children}
+                    {props.children}
                 </div>
             </div>
         </Provider>
