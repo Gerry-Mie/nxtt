@@ -34,20 +34,20 @@ const ContactForm = () => {
                     <form onSubmit={f.handleSubmit(submit)} className='lg:w-1/2'>
                         <div className='flex flex-col gap-3'>
                             <label>
-                                <p>Email</p>
+                                <p className='ml-4 mb-1'>Email</p>
                                 <Input {...f.register('email')}/>
                             </label>
                             <label>
-                                <p>Name</p>
+                                <p className='ml-4 mb-1 mt-2'>Name</p>
                                 <Input {...f.register('name')}/>
                             </label>
                             <label>
-                                <p>Subject</p>
+                                <p className='ml-4 mb-1 mt-2'>Subject</p>
                                 <Input {...f.register('Title')}/>
                             </label>
 
                             <label>
-                                <p>Message</p>
+                                <p className='ml-4 mb-1 mt-2'>Message</p>
                                 <Textarea {...f.register('content')}/>
                             </label>
                             <Button className='mt-10' disabled={mutation.isLoading} name=''
