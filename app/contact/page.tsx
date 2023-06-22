@@ -5,6 +5,8 @@ import {zodResolver} from "@hookform/resolvers/zod"
 import {contactForm, ContactForm} from "@/lib/validations/contact-form";
 import {useMutation} from "@tanstack/react-query";
 import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Button} from "@/components/ui/button";
 
 
 const ContactForm = () => {
@@ -23,31 +25,45 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='h-screen'>
-            <form onSubmit={f.handleSubmit(submit)}>
-                <div className='flex flex-col gap-3'>
-                    <label>
-                        <p>Email</p>
-                        <Input {...f.register('email')}/>
-                    </label>
-                    <label>
-                        <p>Name</p>
-                        <input {...f.register('name')}/>
-                    </label>
-                    <label>
-                        <p>Subject</p>
-                        <input {...f.register('Title')}/>
-                    </label>
+        <div className='h-screen p-10 relative'>
+            <div className='absolute top-0 right-0 blur-2xl z-0 bg-blue-400 w-1/4 h-1/4 opacity-30 rounded-full'/>
+            <div>
+                <h1 className='text-4xl'>Get in touch</h1>
+                <div className='flex justify-between mt-10 gap-12'>
 
-                    <label>
-                        <p>Body</p>
-                        <textarea {...f.register('content')}/>
-                    </label>
-                    <button disabled={mutation.isLoading} name=''
-                            type='submit'>{mutation.isLoading ? 'Sending...' : 'Send'}
-                    </button>
+                    <form onSubmit={f.handleSubmit(submit)} className='w-1/2'>
+                        <div className='flex flex-col gap-3'>
+                            <label>
+                                <p>Email</p>
+                                <Input {...f.register('email')}/>
+                            </label>
+                            <label>
+                                <p>Name</p>
+                                <Input {...f.register('name')}/>
+                            </label>
+                            <label>
+                                <p>Subject</p>
+                                <Input {...f.register('Title')}/>
+                            </label>
+
+                            <label>
+                                <p>Message</p>
+                                <Textarea {...f.register('content')}/>
+                            </label>
+                            <Button className='mt-10' disabled={mutation.isLoading} name=''
+                                    type='submit'>{mutation.isLoading ? 'Sending...' : 'Send'}
+                            </Button>
+                        </div>
+                    </form>
+                    <div className='max-w-md'>
+                        <h3 className='text-2xl'>Want to reach us directly?</h3>
+                        <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui
+                            pharetra elementum sit id sagittis non donec egestas.
+                        </p>
+                    </div>
                 </div>
-            </form>
+            </div>
+
         </div>
     );
 };
