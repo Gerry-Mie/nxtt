@@ -29,9 +29,9 @@ const ContactForm = () => {
             <div className='absolute top-0 right-0 blur-2xl z-0 bg-blue-400 w-1/4 h-1/4 opacity-30 rounded-full'/>
             <div>
                 <h1 className='text-4xl'>Get in touch</h1>
-                <div className='flex justify-between mt-10 gap-12'>
+                <div className={'flex justify-between mt-10 gap-12 flex-col lg:flex-row'}>
 
-                    <form onSubmit={f.handleSubmit(submit)} className='w-1/2'>
+                    <form onSubmit={f.handleSubmit(submit)} className='lg:w-1/2'>
                         <div className='flex flex-col gap-3'>
                             <label>
                                 <p>Email</p>
@@ -55,7 +55,7 @@ const ContactForm = () => {
                             </Button>
                         </div>
                     </form>
-                    <div className='max-w-md'>
+                    <div className='max-w-md mt-20 lg:mt-0'>
                         <h3 className='text-2xl'>Want to reach us directly?</h3>
                         <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui
                             pharetra elementum sit id sagittis non donec egestas.
