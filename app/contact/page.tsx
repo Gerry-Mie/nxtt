@@ -4,6 +4,7 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod"
 import {contactForm, ContactForm} from "@/lib/validations/contact-form";
 import {useMutation} from "@tanstack/react-query";
+import {Input} from "@/components/ui/input";
 
 
 const ContactForm = () => {
@@ -27,7 +28,7 @@ const ContactForm = () => {
                 <div className='flex flex-col gap-3'>
                     <label>
                         <p>Email</p>
-                        <input {...f.register('email')}/>
+                        <Input {...f.register('email')}/>
                     </label>
                     <label>
                         <p>Name</p>
