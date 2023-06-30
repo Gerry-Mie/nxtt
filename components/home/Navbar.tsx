@@ -19,13 +19,11 @@ function Navbar() {
       setTimeout(() => {
         menu?.classList.remove("translate-y-2/3");
         menu?.classList.add("translate-y-0");
-        console.log(menu);
       }, 0);
     } else {
       setTimeout(() => {
         menu?.classList.add("translate-y-2/3");
         menu?.classList.remove("translate-y-0");
-        console.log(menu);
       }, 0);
     }
   };
