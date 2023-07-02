@@ -27,12 +27,12 @@ function Hero() {
         className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#D13449]" />
-          <div className="w-1 sm:h-80 h-40 bg-gradient-to-r violet-gradient" />
+          <div className="w-5 h-5 rounded-full bg-[#96FD15]" />
+          <div className="w-1 sm:h-80 h-40 bg-gradient-to-r green-gradient" />
         </div>
         <div className="">
           <h1 className={`${styles.heroHeadText}`}>
-            Welcome to <span className="text-[#D13449]">Next Technologies</span>
+            Welcome to <span className="text-[#96FD15]">Next Technologies</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2`}>
             Innovate, Collaborate, Code

@@ -1,10 +1,15 @@
 "use client";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./CanvasLoader";
 
-function Computers(props: JSX.IntrinsicElements["mesh"]) {
+interface ComputersProps {
+  isMobile: boolean;
+}
+
+function Computers(props: JSX.IntrinsicElements["mesh"] & ComputersProps) {
+  const { isMobile, ...meshProps } = props;
   const { scene } = useGLTF("./desktop_pc/scene.gltf") as any;
   return (
     <mesh>
@@ -20,8 +25,8 @@ function Computers(props: JSX.IntrinsicElements["mesh"]) {
       />
       <primitive
         object={scene}
-        scale={0.75}
-        position={[0, -3.35, -1.5]}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.35, -1.5]}
         rotation={[-0.01, -0.02, -0.1]}
       />
     </mesh>
@@ -29,6 +34,21 @@ function Computers(props: JSX.IntrinsicElements["mesh"]) {
 }
 
 const ComputerCanvas: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <Canvas
       frameloop="demand"
@@ -42,7 +62,7 @@ const ComputerCanvas: React.FC = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers />
+        <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>

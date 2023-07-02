@@ -1,3 +1,4 @@
+import About from "@/components/home/About";
 import Hero from "@/components/home/Hero";
 import Section2 from "@/components/home/Section2";
 
@@ -8,7 +9,8 @@ export default async function Home() {
         {/* <h1 className='text-4xl'>Page is under development</h1> */}
         <Hero />
       </div>
-      <Section2 />
+      <About />
+      {/* <Section2 /> */}
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
     </main>
   );

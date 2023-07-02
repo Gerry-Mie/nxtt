@@ -29,7 +29,7 @@ function Navbar() {
   };
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary-foreground/30 bg-opacity-50 backdrop-blur-md`}
+      className={`${styles.paddingX} w-full flex items-center py-5 absolute top-0 z-20 bg-transparent`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
