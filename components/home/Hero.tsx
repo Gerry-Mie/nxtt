@@ -1,26 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ComputerSvg from "@/app/assets/ComputerSvg";
-import ComputerFullSvg from "@/app/assets/ComputerFullSvg";
+// import ComputerSvg from "@/assets/ComputerSvg";
+// import ComputerFullSvg from "@/assets/ComputerFullSvg";
 import ComputerCanvas from "./3d/ComputerCanvas";
-import { styles } from "@/app/styles";
+import { styles } from "@/components/styles";
 import { motion } from "framer-motion";
 
 function Hero() {
-  const [isMobile, setIsMobile] = useState(
-    window?.innerWidth <= 1023 ? true : false
-  );
-
-  useEffect(() => {
-    window?.addEventListener("resize", () => {
-      if (window?.innerWidth <= 1023) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
-  });
-
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -32,7 +18,8 @@ function Hero() {
         </div>
         <div className="">
           <h1 className={`${styles.heroHeadText}`}>
-            Welcome to <span className="text-[#96FD15]">Next Technologies</span>
+            We are, <br />
+            <span className="text-[#96FD15]">Next Tech.</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2`}>
             Innovate, Collaborate, Code

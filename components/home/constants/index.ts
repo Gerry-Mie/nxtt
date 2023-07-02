@@ -1,13 +1,9 @@
-import web from "@/app/assets/web1.png"
-import mobile from "@/app/assets/mobile.png"
-import solution from "@/app/assets/solution.png"
-import security from "@/app/assets/security2.png"
-import webTemplate from "@/app/assets/web-template.png"
-import webAnim from "@/app/animation/code-dark.json"
-import mobileAnim from "@/app/animation/mobile-app-development.json"
-import solutionsAnim from "@/app/animation/web-skills.json"
-import securityAnim from "@/app/animation/security.json"
-import electronicsAnim from "@/app/animation/maintain.json"
+
+import webAnim from "@/animation/code-dark.json"
+import mobileAnim from "@/animation/mobile-app-development.json"
+import solutionsAnim from "@/animation/web-skills.json"
+import securityAnim from "@/animation/security.json"
+import electronicsAnim from "@/animation/maintain.json"
 export const navLinks = [
     {
         id: "about",
