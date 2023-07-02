@@ -4,10 +4,10 @@ import Link from "next/link";
 import logo from "../../app/assets/logo-initial.png";
 import Image from "next/image";
 import { navLinks } from "./constants";
-import MenuSvg from "@/app/assets/MenuSvg";
-import LogoInitialSvg from "@/app/assets/LogoInitialSvg";
-import CloseSvg from "@/app/assets/CloseSvg";
-import { styles } from "@/app/styles";
+import MenuSvg from "@/assets/MenuSvg";
+import LogoInitialSvg from "@/assets/LogoInitialSvg";
+import CloseSvg from "@/assets/CloseSvg";
+import { styles } from "@/components/styles";
 
 function Navbar() {
   const [active, setActive] = useState("");

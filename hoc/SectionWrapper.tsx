@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
+import { styles } from "@/components/styles";
 import { staggerContainer } from "@/components/home/utils/motion";
 
 const SectionWrapper = (
   Component: React.ComponentType,
   idName: string
 ): React.FC => {
-  console.log("id", idName);
   return function HOC() {
     // HOC implementation goes here
     return (
