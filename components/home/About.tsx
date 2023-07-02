@@ -1,14 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { styles } from "@/app/styles";
+import { styles } from "@/components/styles";
 import { fadeIn, textVariant } from "./utils/motion";
 import { services } from "./constants";
 import { Tilt } from "react-tilt";
-import { SectionWrapper } from "@/app/hoc";
-import webIcon from "@/app/assets/3d-web-1.png";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
+import { SectionWrapper } from "@/hoc";
 import lottie from "lottie-web";
 
 interface ServiceCardProps {
@@ -19,7 +16,6 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
   const animationContainer = useRef<(HTMLDivElement | null)[]>([]);
-  console.log("icon", icon);
   useEffect(() => {
     services.forEach((service, index) => {
       if (service.icon) {
