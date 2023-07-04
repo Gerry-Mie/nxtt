@@ -8,6 +8,10 @@ interface ComputersProps {
   isMobile: boolean;
 }
 
+interface ComputerCanvasProps {
+  setProgress: any;
+}
+
 function Computers(props: JSX.IntrinsicElements["mesh"] & ComputersProps) {
   const { isMobile, ...meshProps } = props;
   const { scene } = useGLTF("./desktop_pc/scene.gltf") as any;
@@ -33,9 +37,9 @@ function Computers(props: JSX.IntrinsicElements["mesh"] & ComputersProps) {
   );
 }
 
-const ComputerCanvas: React.FC = () => {
+const ComputerCanvas = (props: ComputerCanvasProps) => {
   const [isMobile, setIsMobile] = useState(false);
-
+  const { setProgress } = props;
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
@@ -56,7 +60,7 @@ const ComputerCanvas: React.FC = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense fallback={<CanvasLoader setProgress={setProgress} />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}

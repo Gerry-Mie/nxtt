@@ -8,6 +8,7 @@ import MenuSvg from "@/assets/MenuSvg";
 import LogoInitialSvg from "@/assets/LogoInitialSvg";
 import CloseSvg from "@/assets/CloseSvg";
 import { styles } from "@/components/styles";
+import NextLogo from "@/assets/Nextlogo.png";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -39,14 +40,14 @@ function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          {/* <Image
-            src={logo}
+          <Image
+            src={NextLogo}
             alt="Next-logo"
             className="w-12 h-12 object-contain"
-          /> */}
-          <div className="w-fit h-fit object-contain">
+          />
+          {/* <div className="w-fit h-fit object-contain">
             <LogoInitialSvg />
-          </div>
+          </div> */}
         </Link>
         <ul className="link-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
@@ -57,7 +58,7 @@ function Navbar() {
               } hover:text-white duration-300`}
               onClick={() => {
                 setActive(link.title);
-                setToggle(!toggle);
+                // setToggle(!toggle);
               }}
             >
               <a href={`/${link.id}`}>{link.title}</a>

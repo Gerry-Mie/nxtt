@@ -37,7 +37,8 @@
   }
  
   .dark {
-    --background: 224 71% 4%;
+    /* --background: 224 71% 4%; */
+    --background: 0 0% 0%;
     --foreground: 213 31% 91%;
  
     --muted: 223 47% 11%;
@@ -102,6 +103,6 @@
 
 .green-pink-gradient {
   background: "#96FD15";
-  background: linear-gradient(90.13deg, #96FD15 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #96FD15 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #96FD15 1.9%, #587634 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #96FD15 1.9%, #587634 97.5%);
 }

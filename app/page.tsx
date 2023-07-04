@@ -1,6 +1,8 @@
+import Stack from "@/components/Stack";
 import About from "@/components/home/About";
 import Hero from "@/components/home/Hero";
 import Section2 from "@/components/home/Section2";
+import Works from "@/components/home/Works";
 
 export default async function Home() {
   return (
@@ -10,6 +12,8 @@ export default async function Home() {
         <Hero />
       </div>
       <About />
+      <Stack />
+      <Works />
       {/* <Section2 /> */}
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
     </main>
