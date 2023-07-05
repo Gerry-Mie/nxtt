@@ -19,6 +19,18 @@ import threejs from "@/assets/tech/threejs.png"
 import typescript from "@/assets/tech/typescript.png"
 import trilion1 from "@/assets/Projects/trilion-landing.png"
 import trilionMobile from "@/assets/Projects/trilion-mobile.png"
+import trilionReg from "@/assets/Projects/trilion-register.png"
+import gwana1 from "@/assets/Projects/gwana-landing.png"
+import farm1 from "@/assets/Projects/farm1.png"
+import farm2 from "@/assets/Projects/farm2.png"
+import farm3 from "@/assets/Projects/farm3.png"
+import gwana2 from "@/assets/Projects/gwana2.png"
+import gwana3 from "@/assets/Projects/gwana3.png"
+import gwana4 from "@/assets/Projects/gwana4.png"
+import gwana5 from "@/assets/Projects/gwana5.png"
+import hvv1 from "@/assets/Projects/hvv1.png"
+import hvv2 from "@/assets/Projects/hvv2.png"
+import hvv3 from "@/assets/Projects/hvv3.png"
 export const navLinks = [
     {
         id: "about",
@@ -124,7 +136,7 @@ export const technologies = [
         images: {
             image1: trilion1,
             image2: trilionMobile,
-            image3: "",
+            image3: trilionReg,
         },
         des: "",
         status: "finished"
@@ -133,9 +145,9 @@ export const technologies = [
         name: "farmrich",
         title: "Farmrich International",
         images: {
-            image1: "",
-            image2: "",
-            image3: "",
+            image1: farm1,
+            image2: farm2,
+            image3: farm3,
         },
         des: "",
         status: "finished"
@@ -144,9 +156,9 @@ export const technologies = [
         name: "gwana",
         title: "Gwana Toolbox",
         images: {
-            image1: "",
-            image2: "",
-            image3: "",
+            image1: gwana1,
+            image2: gwana5,
+            image3: gwana4,
         },
         des: "",
         status: "Maintain"
@@ -155,9 +167,9 @@ export const technologies = [
         name: "hvv",
         title: "High Vision Ventures",
         images: {
-            image1: "",
-            image2: "",
-            image3: "",
+            image1: hvv1,
+            image2: hvv2,
+            image3: hvv3,
         },
         des: "",
         status: "Done"

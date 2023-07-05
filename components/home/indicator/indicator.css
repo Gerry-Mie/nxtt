@@ -1,0 +1,128 @@
+:root {
+    --diameter: 20px;
+    --circular-line-width: 2px;
+    --background: #121212;
+    --line-color: #96FD15;
+}
+
+.container {
+    position: relative;
+    height: var(--diameter);
+    width: var(--diameter);
+}
+
+.circle{
+    position: relative;
+}
+
+.outer-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--diameter);
+    width: var(--diameter);
+    border-radius: 50%;
+    background-color: var(--line-color);
+}
+
+.inner-circle{
+    position: absolute;
+    top: var(--circular-line-width);
+    left: var(--circular-line-width);
+    height: calc(var(--diameter) - 2*var(--circular-line-width));
+    width: calc(var(--diameter) - 2*var(--circular-line-width));
+    background-color: var(--background);
+    border-radius: 50%;
+}
+
+.box {
+    position: absolute;
+    height: calc(var(--diameter)/2);
+    width: calc(var(--diameter)/2);
+    background: var(--background);
+}
+
+.box-top-left {
+    left: 0;
+    top: 0;
+    transform-origin: 100% 100%;
+    animation: show-top-left 2s linear forwards;
+
+}
+.box-top-right {
+    top: 0;
+    left: calc(var(--diameter)/2);
+    transform-origin: 0 100%;
+    animation: show-top-right 2s linear 6s forwards;
+}
+.box-bottom-left {
+    left: 0;
+    top: calc(var(--diameter)/2);
+    transform-origin: 100% 0;
+    animation: show-bottom-left 2s linear 2s forwards ;
+}
+.box-bottom-right {
+    left: calc(var(--diameter)/2);
+    top: calc(var(--diameter)/2);
+    transform-origin: 0 0;
+    animation: show-bottom-right 2s linear 4s forwards;
+}
+
+@keyframes show-top-left {
+    0%{
+        transform: skewX(0deg);
+    }
+    99.9%{
+        height: calc(var(--diameter)/2);
+        width: calc(var(--diameter)/2);
+    }
+    100%{
+        height: 0;
+        width: 0;
+        transform: skewX(90deg);
+    }
+}
+
+@keyframes show-bottom-left {
+    0%{
+        transform: skewY(0deg);
+    }
+    99.9%{
+        height: calc(var(--diameter)/2);
+        width: calc(var(--diameter)/2);
+    }
+    100%{
+        height: 0;
+        width: 0;
+        transform: skewY(-90deg);
+    }
+}
+
+@keyframes show-bottom-right {
+    0%{
+        transform: skewX(0deg);
+    }
+    99.9%{
+        height: calc(var(--diameter)/2);
+        width: calc(var(--diameter)/2);
+    }
+    100%{
+        height: 0;
+        width: 0;
+        transform: skewX(90deg);
+    }
+}
+@keyframes show-top-right {
+    0%{
+        transform: skewY(0deg);
+    }
+    99.9%{
+        height: calc(var(--diameter)/2);
+        width: calc(var(--diameter)/2);
+    }
+    100%{
+        height: 0;
+        width: 0;
+        transform: skewY(-90deg);
+    }
+}

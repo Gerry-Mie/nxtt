@@ -7,31 +7,50 @@ import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "react-awesome-slider/src/styles";
 import { Carousel } from "react-responsive-carousel";
 import { works } from "./constants";
+import Indicator from "./indicator/Indicator";
 
 interface CardsProps {
   image1: any;
   image2: any;
   image3: any;
   index: number;
+  title: string;
 }
 
-const Cards: React.FC<CardsProps> = ({ image1, image2, image3, index }) => {
+const Cards: React.FC<CardsProps> = ({
+  image1,
+  image2,
+  image3,
+  index,
+  title,
+}) => {
   console.log("img: ", image1);
   return (
-    <div className="w-full flex justify-center h-[300px]">
-      <div className="relative flex items-center justify-center w-[80%] max-w-full h-full">
-        <div className="absolute left-0 bottom-0 w-[10rem] h-[11rem] rounded overflow-hidden z-0">
-          <img src="" alt="project" className="w-full h-full object-cover" />
-        </div>
-        <div className="w-[26rem] h-[15rem] z-[1] rounded overflow-hidden">
-          <img
-            src={image1.src}
-            alt="project"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute right-0 bottom-0 w-[10rem] h-[11rem] rounded overflow-hidden z-[2]">
-          <img src="" alt="project" className="w-full h-full object-cover" />
+    <div className="flex flex-col items-center">
+      <p className="text-[#96FD15] font-bold">{title}</p>
+      <div className="w-full flex justify-center h-[300px]">
+        <div className="relative flex items-center justify-center w-[80%] lg:w-[48%] max-w-full h-full">
+          <div className="absolute left-0 bottom-0 w-[10rem] h-[20rem] rounded-2xl overflow-hidden z-0">
+            <img
+              src={image2.src}
+              alt="project"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-[29rem] h-[16rem] z-[1] rounded overflow-hidden">
+            <img
+              src={image1.src}
+              alt="project"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute right-0 bottom-0 w-[10rem] h-[20rem] rounded-2xl overflow-hidden z-[2]">
+            <img
+              src={image3.src}
+              alt="project"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -68,7 +87,7 @@ function Works() {
         showStatus={false}
         autoPlay
         infiniteLoop
-        interval={4000}
+        interval={8000}
         // className="mt-20 relative"
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const work = works[index];
@@ -80,11 +99,14 @@ function Works() {
                   ...indicatorStyles,
                   color: "#96FD15",
                   textDecoration: "none",
+                  // margin: 0,
+                  padding: 0,
                 }}
                 aria-label={`Selected: ${label} ${index + 1}`}
                 title={`Selected: ${label} ${index + 1}`}
               >
-                {work.title}
+                {/* {work.title} */}
+                <Indicator />
               </button>
             );
           }
@@ -101,7 +123,7 @@ function Works() {
               title={`${label} ${index + 1}`}
               aria-label={`${label} ${index + 1}`}
             >
-              {work.title}
+              <p className="h-[20px] w-[20px] bg-[#96FD15] rounded-full"></p>
             </button>
           );
         }}
@@ -114,6 +136,7 @@ function Works() {
             image1={work.images.image1}
             image2={work.images.image2}
             image3={work.images.image3}
+            title={work.title}
           />
         ))}
       </Carousel>
