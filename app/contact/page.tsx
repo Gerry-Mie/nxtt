@@ -25,8 +25,8 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='h-screen p-10 relative'>
-            <div className='absolute top-0 right-0 blur-2xl z-0 bg-blue-400 w-1/4 h-1/4 opacity-30 rounded-full'/>
+        <div className='h-screen p-10 relative mt-32'>
+            <div className='absolute top-0 right-12 blur-2xl z-[-1] bg-blue-400 w-64 h-64 opacity-20 rounded-full'/>
             <div>
                 <h1 className='text-4xl'>Get in touch</h1>
                 <div className={'flex justify-between mt-10 gap-12 flex-col lg:flex-row'}>
