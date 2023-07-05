@@ -1,11 +1,17 @@
 'use client'
 
 import React from 'react';
+import logo from '@/assets/Nextlogo.png'
+import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer>
-            
+        <footer  className="max-w-screen-xl m-auto flex justify-center">
+            <div className='flex items-center justify-between'>
+                <Image src={logo} alt='lgo' width={50}/>
+                <h1 className='text-5xl'> <span className='text-[#96FD15]'>next</span>tect.</h1>
+            </div>
+
         </footer>
     );
 };
