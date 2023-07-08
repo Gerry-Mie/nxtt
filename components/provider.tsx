@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 const Provider = (props: any) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         {props.children}
       </ThemeProvider>
     </QueryClientProvider>

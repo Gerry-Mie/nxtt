@@ -7,6 +7,7 @@ import { styles } from "@/components/styles";
 import { motion } from "framer-motion";
 import Lottie from "lottie-web";
 import loading from "@/animation/loading.json";
+import BoxSmall from "./BoxSmall";
 
 function Hero() {
   const [progress, setProgress] = useState(0);
@@ -26,45 +27,33 @@ function Hero() {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div
-        className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          {/* <div className="w-5 h-5 rounded-full bg-[#96FD15]" /> */}
-          {/* <div className="w-1 sm:h-80 h-40 bg-gradient-to-r green-gradient" /> */}
-        </div>
-        <div className="">
-          <h1 className={`${styles.heroHeadText}`}>
-            Innovate with <br />
-            <span className="text-[#96FD15]">Next Tech.</span>
-          </h1>
-          {/* <p className={`${styles.heroSubText} mt-2`}>
-            Innovate, Collaborate, Code
-          </p> */}
-        </div>
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-0">
+        {/* <div className="circle-animation"></div>
+        <div className="circle-animation2"></div> */}
       </div>
-
-      {/* <div className="xl:w-2/4 w-full flex flex-col items-center lg:items-end h-96"></div> */}
-      {/* <div hidden={progress >= 96} className="p-96">
-        <div ref={animationContainer} />
-      </div> */}
-      <ComputerCanvas setProgress={setProgress} />
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center translate-y-44">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-center p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-white mb-1"
-            />
-          </div>
+      <div className="w-full h-full absolute top-0 left-0 backdrop-blur-3xl z-10 flex flex-col justify-center items-center pt-[83px] gap-12">
+        <div className="lg:w-[70%] flex flex-col items-center justify-center px-9">
+          <h1 className={`${styles.heroHeadText} text-center`}>
+            INNOVATE. EVOLVE, SUCCEED
+          </h1>
+          <p className={`${styles.heroSubText} text-center`}>
+            Welcome to the Future of IT Services
+          </p>
+          <p className={`${styles.smallText} text-center mt-2`}>
+            Revolutionize the IT industry with our innovative solutions at Next
+            Tech. Thrive in the ever-changing digital landscape with our passion
+            for excellence and commitment to staying ahead.
+          </p>
+        </div>
+        <a
+          href="#contact"
+          className="text-secondary gradient-button duration-300 px-11 py-4"
+        >
+          Contact Us
         </a>
+        <div className="w-full flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
+          <BoxSmall textBig="+10" textSmall="projects" />
+        </div>
       </div>
     </section>
   );

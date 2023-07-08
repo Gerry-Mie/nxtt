@@ -33,16 +33,24 @@ import hvv2 from "@/assets/Projects/hvv2.png"
 import hvv3 from "@/assets/Projects/hvv3.png"
 export const navLinks = [
     {
-        id: "about",
-        title: "About"
+      id: "expertise",
+      title: "Our Expertise"
     },
     {
-        id: "services",
-        title: "Services"
+        id: "industries",
+        title: "Industries"
+    },
+    {
+        id: "about",
+        title: "About Us"
+    },
+    {
+        id: "blog",
+        title: "Blog"
     },
     {
         id: "contact",
-        title: "Contact"
+        title: "Contact Us"
     }
 ]
 
