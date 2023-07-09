@@ -6,7 +6,7 @@ interface boxSmallProps {
   textSmall: string;
 }
 
-function BoxSmall(props: boxSmallProps) {
+function CardSmall(props: boxSmallProps) {
   return (
     <div className="flex flex-col items-center px-3 py-2">
       <p className="text-[64px] font-bold tracking-[0.192px] gradient">
@@ -19,4 +19,4 @@ function BoxSmall(props: boxSmallProps) {
   );
 }
 
-export default BoxSmall;
+export default CardSmall;
