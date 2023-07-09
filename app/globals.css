@@ -34,6 +34,8 @@
     --ring: 215 20.2% 65.1%;
  
     --radius: 0.5rem;
+
+    --hover: 122° 70% 48%;
   }
  
   .dark {
@@ -105,4 +107,114 @@
   background: "#96FD15";
   background: linear-gradient(90.13deg, #96FD15 1.9%, #587634 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #96FD15 1.9%, #587634 97.5%);
+}
+
+.gradient-text{
+  padding: 5px;
+  border-bottom: 3px solid transparent;
+}
+
+.gradient-text:hover {
+  border-bottom: 3px solid #24E037;
+  color: #24E037;
+}
+
+.active-link {
+  border-bottom: 3px solid #24E037;
+  color: #24E037;
+}
+
+.nav-shadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.gradient-button {
+  border-radius: 50px;
+  background: var(--gradient, linear-gradient(232deg, #24E037 0%, #25DA2C 19.00%, #27C82D 46.00%, #2BAC30 76.00%, #2E9132 99.00%));
+  box-shadow: 6.510080814361572px 6.510080814361572px 22.785282135009766px 0px rgba(37, 219, 44, 0.32);
+}
+
+.circle-animation {
+  position: absolute;
+  top: 50%;
+  left: -250px; /* Initial position outside the left edge */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(232deg, #24E02C 47.32%, #2E9132 100%);
+  animation: moveCircle 12s linear infinite;
+  transform-origin: 50% 50%; /* Set rotation origin to center of the circle */
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: translate(-50%, -50%) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(calc(100vw - 250px)) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(100vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(-250px) rotate(270deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(360deg);
+  }
+}
+
+.circle-animation2 {
+  position: absolute;
+  top: -250px; /* Initial position outside the top edge */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(232deg, #24E02C 47.32%, #2E9132 100%);
+  animation: moveCircle2 12s linear infinite;
+  transform-origin: 50% 50%; /* Set rotation origin to center of the circle */
+}
+
+@keyframes moveCircle2 {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) translateY(calc(100vh - 250px)) rotate(90deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) translateY(0) translateX(calc(100vw - 250px)) rotate(180deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) translateY(-100vh) translateX(calc(100vw - 250px)) rotate(270deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) translateY(-100vh) translateX(0) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+.gradient {
+    background: linear-gradient(to right, #24E02C, #2E9132);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-in-out;
 }

@@ -1,10 +1,9 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import Provider from "@/components/provider";
 import Navbar from "@/components/home/Navbar";
-import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Next Technologies Corp",
@@ -21,7 +20,6 @@ export default function RootLayout(props: any) {
             <Navbar />
             {/* </div> */}
             <div className="max-w-screen-2xl m-auto">{props.children}</div>
-            <Footer/>
           </div>
         </Provider>
       </body>
