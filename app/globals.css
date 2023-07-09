@@ -198,3 +198,23 @@
     transform: translate(-50%, -50%) translateY(0) translateX(0) rotate(0deg);
   }
 }
+
+.gradient {
+    background: linear-gradient(to right, #24E02C, #2E9132);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-in-out;
+}

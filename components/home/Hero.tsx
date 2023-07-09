@@ -26,12 +26,12 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-fit mx-auto">
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-0">
         {/* <div className="circle-animation"></div>
         <div className="circle-animation2"></div> */}
       </div>
-      <div className="w-full h-full absolute top-0 left-0 backdrop-blur-3xl z-10 flex flex-col justify-center items-center pt-[83px] gap-12">
+      <div className="w-full h-full relative top-0 left-0 backdrop-blur-3xl z-10 flex flex-col justify-center items-center pt-[200px] gap-12">
         <div className="lg:w-[70%] flex flex-col items-center justify-center px-9">
           <h1 className={`${styles.heroHeadText} text-center`}>
             INNOVATE. EVOLVE, SUCCEED
@@ -51,8 +51,14 @@ function Hero() {
         >
           Contact Us
         </a>
-        <div className="w-full flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
-          <BoxSmall textBig="+10" textSmall="projects" />
+        <div className="w-full lg:flex-row flex-col flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
+          <BoxSmall textBig="10+" textSmall="projects" />
+          <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
+          <BoxSmall textBig="20+" textSmall="professionals" />
+          <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
+          <BoxSmall textBig="100%" textSmall="job success" />
+          <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
+          <BoxSmall textBig="30+" textSmall="technologies" />
         </div>
       </div>
     </section>
