@@ -7,7 +7,7 @@ import { styles } from "@/components/styles";
 import { motion } from "framer-motion";
 import Lottie from "lottie-web";
 import loading from "@/animation/loading.json";
-import BoxSmall from "./BoxSmall";
+import CardSmall from "./CardSmall";
 
 function Hero() {
   const [progress, setProgress] = useState(0);
@@ -52,13 +52,13 @@ function Hero() {
           Contact Us
         </a>
         <div className="w-full lg:flex-row flex-col flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
-          <BoxSmall textBig="10+" textSmall="projects" />
+          <CardSmall textBig="10+" textSmall="projects" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
-          <BoxSmall textBig="20+" textSmall="professionals" />
+          <CardSmall textBig="20+" textSmall="professionals" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
-          <BoxSmall textBig="100%" textSmall="job success" />
+          <CardSmall textBig="100%" textSmall="job success" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
-          <BoxSmall textBig="30+" textSmall="technologies" />
+          <CardSmall textBig="30+" textSmall="technologies" />
         </div>
       </div>
     </section>
