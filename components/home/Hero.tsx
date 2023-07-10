@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-web";
 import loading from "@/animation/loading.json";
 import CardSmall from "./CardSmall";
+import ArrowDown from "@/assets/ArrowDown";
+import ButtonPrimary from "../ButtonPrimary";
 
 function Hero() {
   const [progress, setProgress] = useState(0);
@@ -45,12 +47,11 @@ function Hero() {
             for excellence and commitment to staying ahead.
           </p>
         </div>
-        <a
+        <ButtonPrimary
+          classNames="text-xl "
           href="#contact"
-          className="text-secondary gradient-button duration-300 px-11 py-4"
-        >
-          Contact Us
-        </a>
+          title="Contact Us"
+        />
         <div className="w-full lg:flex-row flex-col flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
           <CardSmall textBig="10+" textSmall="projects" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
@@ -59,6 +60,9 @@ function Hero() {
           <CardSmall textBig="100%" textSmall="job success" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
           <CardSmall textBig="30+" textSmall="technologies" />
+        </div>
+        <div className="flex items-center justify-center py-10 arrow-icon">
+          <ArrowDown />
         </div>
       </div>
     </section>

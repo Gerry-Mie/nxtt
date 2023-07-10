@@ -7,6 +7,7 @@ import MenuSvg from "@/assets/MenuSvg";
 import CloseSvg from "@/assets/CloseSvg";
 import { styles } from "@/components/styles";
 import LogoHeader from "@/assets/LogoHeader";
+import ButtonPrimary from "../ButtonPrimary";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -41,15 +42,13 @@ function Navbar() {
         id="nav"
         className={`${
           styles.paddingX
-        } fixed w-full flex items-center top-0 z-20 transition-padding duration-300 ${
-          scrolled
-            ? "py-3 nav-shadow backdrop-blur-xl"
-            : "py-5 backdrop-blur-md"
+        } fixed w-full flex items-center top-0 z-20 transition-padding duration-300 backdrop-blur-md ${
+          scrolled ? "py-3 nav-shadow" : "py-5 "
         }`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
-            href={"/"}
+            href={"#"}
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -88,12 +87,12 @@ function Navbar() {
                     // setToggle(!toggle);
                   }}
                 >
-                  <a
-                    className={`text-secondary gradient-button duration-300 px-10 py-2`}
+                  <ButtonPrimary
+                    title={link.title}
                     href={`#${link.id}`}
-                  >
-                    {link.title}
-                  </a>
+                    py="2"
+                    px="10"
+                  />
                 </li>
               )
             )}
