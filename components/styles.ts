@@ -11,7 +11,7 @@ const styles = {
     sectionHeadText:
       "font-bold md:text-[56px] sm:text-[46px] xs:text-[36px] text-[26px]",
     sectionSubText:
-      "sm:text-[18px] text-[14px] uppercase tracking-wider",
+      "sm:text-[18px] text-[14px] tracking-wider",
     smallText: 
       "text-[#4B4B4B] text-lg font-normal"
   };

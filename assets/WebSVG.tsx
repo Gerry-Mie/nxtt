@@ -136,7 +136,7 @@ export default function WebSVG() {
           width="113.756"
           height="68.8496"
           rx="14.1353"
-          fill="#080E42"
+          fill="#262626"
         />
       </g>
       <g filter="url(#filter1_d_112_577)">
@@ -146,7 +146,7 @@ export default function WebSVG() {
           width="136.32"
           height="67.2325"
           rx="13.8033"
-          fill="#080E42"
+          fill="#262626"
         />
       </g>
       <g filter="url(#filter2_d_112_577)">
@@ -156,7 +156,7 @@ export default function WebSVG() {
           width="137.596"
           height="67.8618"
           rx="13.9325"
-          fill="#080E42"
+          fill="#262626"
         />
       </g>
       <path

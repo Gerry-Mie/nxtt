@@ -1,34 +1,4 @@
 
-import webAnim from "@/animation/code-dark.json";
-import mobileAnim from "@/animation/mobile-app-development.json";
-import solutionsAnim from "@/animation/web-skills.json";
-import securityAnim from "@/animation/security.json";
-import electronicsAnim from "@/animation/maintain.json";
-import css from "@/assets/tech/css.png";
-import docker from "@/assets/tech/docker.png";
-import figma from "@/assets/tech/figma.png";
-import git from "@/assets/tech/git.png";
-import html from "@/assets/tech/html.png";
-import javascript from "@/assets/tech/javascript.png";
-import mongodb from "@/assets/tech/mongodb.png";
-import nodejs from "@/assets/tech/nodejs.png";
-import reactjs from "@/assets/tech/reactjs.png";
-import redux from "@/assets/tech/redux.png";
-import tailwind from "@/assets/tech/tailwind.png";
-import threejs from "@/assets/tech/threejs.png";
-import typescript from "@/assets/tech/typescript.png";
-import trilion1 from "@/assets/Projects/trilion-landing.png";
-import trilionMobile from "@/assets/Projects/trilion-mobile.png";
-import trilionReg from "@/assets/Projects/trilion-register.png";
-import gwana1 from "@/assets/Projects/gwana-landing.png";
-import farm1 from "@/assets/Projects/farm1.png";
-import farm2 from "@/assets/Projects/farm2.png";
-import farm3 from "@/assets/Projects/farm3.png";
-import gwana4 from "@/assets/Projects/gwana4.png";
-import gwana5 from "@/assets/Projects/gwana5.png";
-import hvv1 from "@/assets/Projects/hvv1.png";
-import hvv2 from "@/assets/Projects/hvv2.png";
-import hvv3 from "@/assets/Projects/hvv3.png";
 import MobileSVG from "@/assets/MobileSVG";
 import WebSVG from "@/assets/WebSVG";
 import BackendSVG from "@/assets/BackendSVG";
@@ -40,6 +10,40 @@ import Dart from "@/assets/expertise/dartIcon.png"
 import Firebase from "@/assets/expertise/firebaseIcon.png"
 import GraphQL from "@/assets/expertise/graphqlIcon.png"
 import SQLite from "@/assets/expertise/sqlLiteIcon.png"
+import Angular from "@/assets/expertise/angularIcon.png"
+import Sass from "@/assets/expertise/sassIcon.png"
+import Tailwindcss from "@/assets/expertise/tailwindcssIcon.png"
+import HtmlIcon from "@/assets/expertise/htmlIcon.png"
+import NextJS from "@/assets/expertise/nextjsIcon.png"
+import ReactJS from "@/assets/expertise/reactjsIcon.png"
+import Bootstrap from "@/assets/expertise/bootstrapIcon.png"
+import Jquery from "@/assets/expertise/jqueryIcon.png"
+import TypeScript from "@/assets/expertise/typescriptIcon.png"
+import NestJS from "@/assets/expertise/nestjsIcon.png"
+import NodeJS from "@/assets/expertise/nodejsIcon.png"
+import Lambda from "@/assets/expertise/lambdaIcon.png"
+import Git from "@/assets/expertise/gitIcon.png"
+import Aws from "@/assets/expertise/awsIcon.png"
+import Docker from "@/assets/expertise/dockerIcon.png"
+import Gcloud from "@/assets/expertise/gcloudIcon.png"
+import GithubAct from "@/assets/expertise/gitactIcon.png"
+import Azure from "@/assets/expertise/azureIcon.png"
+import Figma from "@/assets/expertise/figmaIcon.png"
+import Figmajam from "@/assets/expertise/figmajamIcon.png"
+import Sketch from "@/assets/expertise/sketchIcon.png"
+import Zeplin from "@/assets/expertise/zeplinIcon.png"
+import AdobeXD from "@/assets/expertise/adobeXDIcon.png"
+import AdobePS from "@/assets/expertise/adobePSIcon.png"
+import AdobeAI from "@/assets/expertise/adobeAIIcon.png"
+import IOT from "@/assets/Industries/image-import.jpg";
+import Health from "@/assets/Industries/health.jpg"
+import Communication from "@/assets/Industries/communication.jpg"
+import ITservices from "@/assets/Industries/itservices.jpg"
+import Edtech from "@/assets/Industries/edtech.jpg"
+import Retail from "@/assets/Industries/retail.jpg"
+
+
+
 export const navLinks = [
     {
       id: "expertise",
@@ -62,136 +66,6 @@ export const navLinks = [
         title: "Contact Us"
     }
 ]
-
-export const services=[
-    {
-        title: "Web App Development",
-        id: "webdev",
-        icon: webAnim
-    },
-    {
-        title: "Mobile App Development",
-        id: "mobdev",
-        icon: mobileAnim
-    },
-    {
-        title: "IT Solutions",
-        id: "solutions",
-        icon: solutionsAnim
-    }, 
-    {
-        title: "Security Installations",
-        id: "security",
-        icon: securityAnim
-    },
-    {
-        title: "Electronics Repair",
-        id: "electronics",
-        icon: electronicsAnim
-    }
-]
-
-export const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-
-  export const works =[
-    {
-        name: "trilion",
-        title: "Trilion Ventures",
-        images: {
-            image1: trilion1,
-            image2: trilionMobile,
-            image3: trilionReg,
-        },
-        des: "",
-        status: "finished"
-    },
-    {
-        name: "farmrich",
-        title: "Farmrich International",
-        images: {
-            image1: farm1,
-            image2: farm2,
-            image3: farm3,
-        },
-        des: "",
-        status: "finished"
-    },
-    {
-        name: "gwana",
-        title: "Gwana Toolbox",
-        images: {
-            image1: gwana1,
-            image2: gwana5,
-            image3: gwana4,
-        },
-        des: "",
-        status: "Maintain"
-    },
-    {
-        name: "hvv",
-        title: "High Vision Ventures",
-        images: {
-            image1: hvv1,
-            image2: hvv2,
-            image3: hvv3,
-        },
-        des: "",
-        status: "Done"
-    },
-  ]
 
   export const expertise = [
     {
@@ -246,39 +120,39 @@ export const technologies = [
       tech: [
         {
           id: "typescript",
-          icon: ""
+          icon: TypeScript
         },
         {
           id: "reactjs",
-          icon: ""
+          icon: ReactJS
         },
         {
           id: "angular",
-          icon: ""
+          icon: Angular
         },
         {
           id: "sass",
-          icon: ""
+          icon: Sass
         },
         {
           id: "tailwind",
-          icon: ""
+          icon: Tailwindcss
         },
         {
           id: "html",
-          icon: ""
+          icon: HtmlIcon
         },
         {
           id: "nextjs",
-          icon: ""
+          icon: NextJS
         },
         {
           id: "bootstrap",
-          icon: ""
+          icon: Bootstrap
         },
         {
           id: "jquery",
-          icon: ""
+          icon: Jquery
         },
       ]
     },
@@ -296,23 +170,23 @@ export const technologies = [
       tech: [
         {
           id: "nestjs",
-          icon: ""
+          icon: NestJS
         },
         {
           id: "nodejs",
-          icon: ""
+          icon: NodeJS
         },
         {
           id: "firebasebe",
-          icon: ""
+          icon: Firebase
         },
         {
           id: "awslambda",
-          icon: ""
+          icon: Lambda
         },
         {
           id: "typescriptbe",
-          icon: ""
+          icon: TypeScript
         },
       ]
     },
@@ -331,27 +205,27 @@ export const technologies = [
       tech: [
         {
           id: "git",
-          icon: ""
+          icon: Git
         },
         {
           id: "aws",
-          icon: ""
+          icon: Aws
         },
         {
           id: "docker",
-          icon: ""
+          icon: Docker
         },
         {
           id: "gcloud",
-          icon: ""
+          icon: Gcloud
         },
         {
           id: "githubact",
-          icon: ""
+          icon: GithubAct
         },
         {
           id: "azure",
-          icon: ""
+          icon: Azure
         },
       ]
     },
@@ -368,32 +242,71 @@ export const technologies = [
       tech: [
         {
           id: "figma",
-          icon: ""
+          icon: Figma
         },
         {
           id: "figjam",
-          icon: ""
+          icon: Figmajam
         },
         {
           id: "sketch",
-          icon: ""
+          icon: Sketch
         },
         {
           id: "zeplin",
-          icon: ""
+          icon: Zeplin
         },
         {
           id: "xd",
-          icon: ""
+          icon: AdobeXD
         },
         {
           id: "photoshop",
-          icon: ""
+          icon: AdobePS
         },
         {
           id: "illustrator",
-          icon: ""
+          icon: AdobeAI
         },
       ]
+    },
+  ]
+  
+  export const industries = [
+    {
+      id: "iot",
+      title: "IoT",
+      description: `We connect devices and systems, unlocking new possibilities in connectivity and automation.`,
+      image: IOT,
+    },
+    {
+      id: "health",
+      title: "health care",
+      description: `We leverage technology to enhance healthcare delivery and improve patient outcomes.`,
+      image: Health,
+    },
+    {
+      id: "communications",
+      title: "communications",
+      description: `We enable seamless and efficient communication for businesses, empowering collaboration and productivity.`,
+      image: Communication,
+    },
+    {
+      id: "business/it",
+      title: "business / IT services",
+      description: `We provide comprehensive IT solutions and services to streamline operations and drive business success.`,
+      image: ITservices,
+    },
+    {
+      id: "edtech",
+      title: "EdTech",
+      description: `We innovate education, empowering educators and students for revolutionary learning experiences.`,
+      image: Edtech,
+    },
+    {
+      id: "retail",
+      title: "Retail",
+      description: `We help retailers adapt to the digital landscape, optimize operations, and provide personalized experiences for customers.`,
+      image: Retail,
     },
   ]

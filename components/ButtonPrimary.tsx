@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
-  href: string;
+  href?: string;
   title: string;
   classNames?: string;
   px?: string;

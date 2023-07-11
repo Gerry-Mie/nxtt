@@ -20,21 +20,9 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  // console.log("scroll", scrolled);
   const handleToggle = () => {
     setToggle(!toggle);
     const menu = document.getElementById("menuModal");
-    // if (!toggle) {
-    //   setTimeout(() => {
-    //     menu?.classList.remove("translate-y-2/3");
-    //     menu?.classList.add("translate-y-0");
-    //   }, 0);
-    // } else {
-    //   setTimeout(() => {
-    //     menu?.classList.add("translate-y-2/3");
-    //     menu?.classList.remove("translate-y-0");
-    //   }, 0);
-    // }
   };
   return (
     <>
@@ -48,17 +36,12 @@ function Navbar() {
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
-            href={"#"}
+            href={"/"}
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
             }}
           >
-            {/* <Image
-            src={NextLogo2}
-            alt="Next-logo"
-            className="h-full object-contain"
-          /> */}
             <div className="w-fit h-fit object-contain">
               <LogoHeader />
             </div>
@@ -74,22 +57,20 @@ function Navbar() {
                   } gradient-text duration-300`}
                   onClick={() => {
                     setActive(link.id);
-                    // setToggle(!toggle);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`/#${link.id}`}>{link.title}</a>
                 </li>
               ) : (
                 <li
                   key={link.id}
                   onClick={() => {
                     setActive(link.id);
-                    // setToggle(!toggle);
                   }}
                 >
                   <ButtonPrimary
                     title={link.title}
-                    href={`#${link.id}`}
+                    href={`/${link.id}`}
                     py="2"
                     px="10"
                   />
@@ -113,20 +94,40 @@ function Navbar() {
         }`}
       >
         <ul className="list-none flex items-start flex-col gap-4 p-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.id ? "text-white" : "text-slate-600"
-              } hover:text-white duration-300`}
-              onClick={() => {
-                setActive(link.title);
-                setToggle(!toggle);
-              }}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
+          {navLinks.map((link) =>
+            link.id !== "contact" ? (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.id ? "text-white" : "text-slate-600"
+                } hover:text-white duration-300`}
+                onClick={() => {
+                  setActive(link.title);
+                  setToggle(!toggle);
+                }}
+              >
+                <a href={`/#${link.id}`}>{link.title}</a>
+              </li>
+            ) : (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.id ? "text-white" : "text-slate-600"
+                } hover:text-white duration-300`}
+                onClick={() => {
+                  setActive(link.title);
+                  setToggle(!toggle);
+                }}
+              >
+                <ButtonPrimary
+                  title={link.title}
+                  href={`/${link.id}`}
+                  py="2"
+                  px="10"
+                />
+              </li>
+            )
+          )}
         </ul>
       </div>
     </>
