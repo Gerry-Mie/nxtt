@@ -9,9 +9,9 @@ const styles = {
       "font-semibold lg:text-[32px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
   
     sectionHeadText:
-      "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+      "font-bold md:text-[56px] sm:text-[46px] xs:text-[36px] text-[26px]",
     sectionSubText:
-      "sm:text-[18px] text-[14px] uppercase tracking-wider",
+      "sm:text-[18px] text-[14px] tracking-wider",
     smallText: 
       "text-[#4B4B4B] text-lg font-normal"
   };
