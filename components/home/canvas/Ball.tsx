@@ -7,7 +7,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../3d/CanvasLoader";
 
 interface BallProps {
   imgUrl: string;

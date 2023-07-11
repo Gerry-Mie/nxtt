@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-web";
 import loading from "@/animation/loading.json";
 import CardSmall from "./CardSmall";
+import ArrowDown from "@/assets/ArrowDown";
+import ButtonPrimary from "../ButtonPrimary";
+import Reveal from "./Reveal";
 
 function Hero() {
   const [progress, setProgress] = useState(0);
@@ -33,24 +36,30 @@ function Hero() {
       </div>
       <div className="w-full h-full relative top-0 left-0 backdrop-blur-3xl z-10 flex flex-col justify-center items-center pt-[200px] gap-12">
         <div className="lg:w-[70%] flex flex-col items-center justify-center px-9">
-          <h1 className={`${styles.heroHeadText} text-center`}>
-            INNOVATE. EVOLVE, SUCCEED
-          </h1>
-          <p className={`${styles.heroSubText} text-center`}>
-            Welcome to the Future of IT Services
-          </p>
-          <p className={`${styles.smallText} text-center mt-2`}>
-            Revolutionize the IT industry with our innovative solutions at Next
-            Tech. Thrive in the ever-changing digital landscape with our passion
-            for excellence and commitment to staying ahead.
-          </p>
+          <Reveal width="w-fit">
+            <h1 className={`${styles.heroHeadText} text-center`}>
+              INNOVATE. EVOLVE, SUCCEED
+            </h1>
+          </Reveal>
+
+          <Reveal width="w-fit" delay={0.3}>
+            <p className={`${styles.heroSubText} text-center`}>
+              Welcome to the Future of IT Services
+            </p>
+          </Reveal>
+          <Reveal width="w-fit" delay={0.4}>
+            <p className={`${styles.smallText} text-center mt-2`}>
+              Revolutionize the IT industry with our innovative solutions at
+              Next Tech. Thrive in the ever-changing digital landscape with our
+              passion for excellence and commitment to staying ahead.
+            </p>
+          </Reveal>
         </div>
-        <a
-          href="#contact"
-          className="text-secondary gradient-button duration-300 px-11 py-4"
-        >
-          Contact Us
-        </a>
+        <ButtonPrimary
+          classNames="text-xl "
+          href="/contact"
+          title="Contact Us"
+        />
         <div className="w-full lg:flex-row flex-col flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
           <CardSmall textBig="10+" textSmall="projects" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
@@ -59,6 +68,9 @@ function Hero() {
           <CardSmall textBig="100%" textSmall="job success" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
           <CardSmall textBig="30+" textSmall="technologies" />
+        </div>
+        <div className="flex items-center justify-center py-10 arrow-icon">
+          <ArrowDown />
         </div>
       </div>
     </section>
