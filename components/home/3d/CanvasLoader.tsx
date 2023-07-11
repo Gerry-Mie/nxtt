@@ -5,7 +5,7 @@ import loading from "@/animation/loading.json";
 import Lottie from "lottie-web";
 
 interface CanvasLoaderProps {
-  setProgress: any;
+  setProgress?: any;
 }
 
 const CanvasLoader = (props: CanvasLoaderProps) => {
