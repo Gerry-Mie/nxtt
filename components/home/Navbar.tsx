@@ -54,7 +54,7 @@ function Navbar() {
                   key={link.id}
                   className={`${
                     active === link.id && "active-link"
-                  } gradient-text duration-300`}
+                  } gradient-text duration-300 glow`}
                   onClick={() => {
                     setActive(link.id);
                   }}
