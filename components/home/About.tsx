@@ -8,7 +8,7 @@ export default function About() {
   return (
     // todo remove padding bottom after footer fixed
     <section className="relative w-full h-fit mx-auto mt-20 min-h-[300px] flex flex-col items-center gap-10 pb-20">
-      <div className="absolute top-0 max-w-full">
+      <div className="absolute top-0 max-w-full pointer-events-none">
         <LogoBG />
       </div>
 
