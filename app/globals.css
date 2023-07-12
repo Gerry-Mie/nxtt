@@ -302,3 +302,6 @@ html{
   background-color: transparent;
 }
 
+.glow {
+  text-shadow: 0 0 1px white;
+}

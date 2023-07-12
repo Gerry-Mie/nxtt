@@ -27,41 +27,6 @@ function Navbar() {
   };
   return (
     <>
-      <Helmet>
-        {/* <!-- Primary Meta Tags --> */}
-        <title>Next Technologies Corp</title>
-        <meta name="title" content="Next Technologies Corp" />
-        <meta
-          name="description"
-          content="Your Vision, Our Code: Building Success Together"
-        />
-
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nxttcorp.com/" />
-        <meta property="og:title" content="Next Technologies Corp" />
-        <meta
-          property="og:description"
-          content="Your Vision, Our Code: Building Success Together"
-        />
-        <meta
-          property="og:image"
-          content="https://nxttcorp-my.sharepoint.com/personal/gerrymie_lumawag_nxttcorp_com/Documents/projects/software%20development/nexttech/Assets/FEED%20LANDSCAPE.png"
-        />
-
-        {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://nxttcorp.com/" />
-        <meta property="twitter:title" content="Next Technologies Corp" />
-        <meta
-          property="twitter:description"
-          content="Your Vision, Our Code: Building Success Together"
-        />
-        <meta
-          property="twitter:image"
-          content="https://nxttcorp-my.sharepoint.com/personal/gerrymie_lumawag_nxttcorp_com/Documents/projects/software%20development/nexttech/Assets/FEED%20LANDSCAPE.png"
-        />
-      </Helmet>
       <nav
         id="nav"
         className={`${
@@ -90,12 +55,20 @@ function Navbar() {
                   key={link.id}
                   className={`${
                     active === link.id && "active-link"
-                  } gradient-text duration-300`}
+                  } gradient-text duration-300 glow`}
                   onClick={() => {
                     setActive(link.id);
                   }}
                 >
-                  <a href={`/#${link.id}`}>{link.title}</a>
+                  <a
+                    href={
+                      link.behavior === "scroll"
+                        ? `/#${link.id}`
+                        : `/${link.id}`
+                    }
+                  >
+                    {link.title}
+                  </a>
                 </li>
               ) : (
                 <li
@@ -142,7 +115,13 @@ function Navbar() {
                   setToggle(!toggle);
                 }}
               >
-                <a href={`/#${link.id}`}>{link.title}</a>
+                <a
+                  href={
+                    link.behavior === "scroll" ? `/#${link.id}` : `/${link.id}`
+                  }
+                >
+                  {link.title}
+                </a>
               </li>
             ) : (
               <li
