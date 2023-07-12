@@ -47,23 +47,28 @@ import Retail from "@/assets/Industries/retail.jpg"
 export const navLinks = [
     {
       id: "expertise",
-      title: "Our Expertise"
+      title: "Our Expertise",
+      behavior: "scroll"
     },
     {
         id: "industries",
-        title: "Industries"
+        title: "Industries",
+        behavior: "scroll"
     },
     {
         id: "about",
-        title: "About Us"
+        title: "About Us",
+        behavior: "redirect"
     },
     {
         id: "blog",
-        title: "Blog"
+        title: "Blog",
+        behavior: "redirect"
     },
     {
         id: "contact",
-        title: "Contact Us"
+        title: "Contact Us",
+        behavior: "redirect"
     }
 ]
 

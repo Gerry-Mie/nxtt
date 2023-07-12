@@ -29,7 +29,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-fit mx-auto">
+    <section className="relative w-full h-fit mx-auto max-h-screen">
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-0">
         {/* <div className="circle-animation"></div>
         <div className="circle-animation2"></div> */}
