@@ -97,14 +97,8 @@ html{
     rgba(85, 56, 60, 0) 100%
   );
 }
-.green-gradient {
-  background: #96FD15;
-  background: linear-gradient(-90deg, #96FD15 0%, rgba(85, 56, 60, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #96FD15 0%,
-    rgba(78, 92, 61, 0) 100%
-  );
+.gradient-bg {
+  background: var(--gradient, linear-gradient(232deg, #24E037 0%, #25DA2C 19.00%, #27C82D 46.00%, #2BAC30 76.00%, #2E9132 99.00%));
 }
 
 .green-pink-gradient {
@@ -242,8 +236,8 @@ html{
 .bg-line {
   position: absolute;
   top: 50px;
-  left: 0;
-  width: 100%;
+  left: -100px;
+  width: 110vw;
   height: 100px;
   /* background-color: #24E02C; */
   overflow: hidden;
@@ -257,8 +251,8 @@ html{
 .bg-line2 {
   position: absolute;
   top: 50px;
-  left: 0;
-  width: 100%;
+  left: -100px;
+  width: 110vw;
   height: 100px;
   background-color: transparent;
   overflow: hidden;

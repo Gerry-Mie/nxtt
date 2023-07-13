@@ -71,7 +71,7 @@ function Industries() {
             <IndustryCard
               key={val.id}
               index={val.id}
-              src={val.image.src}
+              src={typeof val.image === "string" ? val.image : val.image.src}
               alt={val.title}
               title={val.title}
               description={val.description}

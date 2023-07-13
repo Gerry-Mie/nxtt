@@ -10,7 +10,7 @@ function Expertise() {
   const [active, setActive] = useState("mobiledev");
   return (
     <section className="relative w-full h-fit mx-auto mt-20 min-h-[300px]">
-      <div className="bg-line2 z-0 rotate-[12deg] relative flex items-center justify-center opacity-30 ">
+      <div className="bg-line2 z-0 rotate-[10deg] relative flex items-center justify-center opacity-30 ">
         <p className="sliding-text2 uppercase w-screen h-fit text-[64px] font-extrabold text-primary">
           mobile / web / backend / system design / devops / ui / ux / mobile /
           web / backend / system design / devops / ui / ux / mobile / web /
@@ -18,7 +18,7 @@ function Expertise() {
           system design / devops / ui / ux /
         </p>
       </div>
-      <div className="bg-line z-[2] rotate-[-12deg] relative flex items-center justify-center bg-[#BDF6BF] backdrop-blur-md">
+      <div className="bg-line z-[2] rotate-[-10deg] relative flex items-center justify-center bg-[#BDF6BF] backdrop-blur-md">
         <p className="sliding-text uppercase w-screen h-fit text-4xl font-extrabold text-secondary">
           mobile / web / backend / system design / devops / ui / ux / mobile /
           web / backend / system design / devops / ui / ux / mobile / web /

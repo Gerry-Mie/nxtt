@@ -1,10 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-// import ComputerSvg from "@/assets/ComputerSvg";
-// import ComputerFullSvg from "@/assets/ComputerFullSvg";
-import ComputerCanvas from "./3d/ComputerCanvas";
 import { styles } from "@/components/styles";
-import { motion } from "framer-motion";
 import Lottie from "lottie-web";
 import loading from "@/animation/loading.json";
 import CardSmall from "./CardSmall";
@@ -13,8 +9,6 @@ import ButtonPrimary from "../ButtonPrimary";
 import Reveal from "./Reveal";
 
 function Hero() {
-  const [progress, setProgress] = useState(0);
-
   const animationContainer = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (animationContainer.current) {
@@ -29,7 +23,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-fit mx-auto max-h-screen">
+    <section className="relative w-full h-fit mx-auto">
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-0">
         {/* <div className="circle-animation"></div>
         <div className="circle-animation2"></div> */}
@@ -60,6 +54,9 @@ function Hero() {
           href="/contact"
           title="Contact Us"
         />
+        <div className="flex items-center justify-center py-10 arrow-icon">
+          <ArrowDown />
+        </div>
         <div className="w-full lg:flex-row flex-col flex items-center justify-center p-5 gap-5 bg-[#EEEEF2]">
           <CardSmall textBig="10+" textSmall="projects" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
@@ -68,9 +65,6 @@ function Hero() {
           <CardSmall textBig="100%" textSmall="job success" />
           <span className="lg:w-1 w-full bg-secondary h-1 lg:h-full" />
           <CardSmall textBig="30+" textSmall="technologies" />
-        </div>
-        <div className="flex items-center justify-center py-10 arrow-icon">
-          <ArrowDown />
         </div>
       </div>
     </section>
