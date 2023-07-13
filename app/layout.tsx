@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import Provider from "@/components/provider";
 import Navbar from "@/components/home/Navbar";
 import Footer from "@/components/footer";
+import MetaImage from "@/assets/next_meta_image.png";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -30,10 +31,7 @@ export default function RootLayout(props: any) {
           property="og:description"
           content="Your Vision, Our Code: Building Success Together"
         />
-        <meta
-          property="og:image"
-          content="https://nxttcorp-my.sharepoint.com/personal/gerrymie_lumawag_nxttcorp_com/Documents/projects/software%20development/nexttech/Assets/FEED%20LANDSCAPE.png"
-        />
+        <meta property="og:image" content={MetaImage.src} />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -43,10 +41,7 @@ export default function RootLayout(props: any) {
           property="twitter:description"
           content="Your Vision, Our Code: Building Success Together"
         />
-        <meta
-          property="twitter:image"
-          content="https://nxttcorp-my.sharepoint.com/personal/gerrymie_lumawag_nxttcorp_com/Documents/projects/software%20development/nexttech/Assets/FEED%20LANDSCAPE.png"
-        />
+        <meta property="twitter:image" content={MetaImage.src} />
       </head>
       <body className={inter.className}>
         <Provider>
