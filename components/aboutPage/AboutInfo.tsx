@@ -43,7 +43,7 @@ function AboutInfo() {
               Drawing on our extensive expertise, we specialize in crafting
               high-performance mobile applications and dynamic websites. Using
               cutting-edge tools and technologies like <b>React Native</b>,{" "}
-              <b>ReactJS, Angular, Node.Js</b>, we create immersive digital
+              <b>React.JS, Next.JS, Node.Js</b>, we create immersive digital
               experiences that captivate audiences and drive tangible business
               growth.
             </p>

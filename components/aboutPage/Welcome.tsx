@@ -11,7 +11,7 @@ function Welcome() {
         <LogoBG />
       </div>
       <motion.p
-        className={`${styles.sectionHeadText} text-center`}
+        className={`${styles.sectionHeadText} text-center uppercase`}
         variants={{
           hidden: { opacity: 0, x: 200 },
           visible: { opacity: 1, x: 0 },
