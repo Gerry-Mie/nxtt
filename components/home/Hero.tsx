@@ -24,11 +24,7 @@ function Hero() {
 
   return (
     <section className="relative w-full h-fit mx-auto">
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-0">
-        {/* <div className="circle-animation"></div>
-        <div className="circle-animation2"></div> */}
-      </div>
-      <div className="w-full h-full relative top-0 left-0 backdrop-blur-3xl z-10 flex flex-col justify-center items-center pt-[200px] gap-12">
+      <div className="w-full h-full relative top-0 left-0 z-10 flex flex-col justify-center items-center pt-[200px] gap-12">
         <div className="lg:w-[70%] flex flex-col items-center justify-center px-9">
           <Reveal width="w-fit">
             <h1 className={`${styles.heroHeadText} text-center`}>
