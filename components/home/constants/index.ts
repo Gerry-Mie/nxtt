@@ -41,6 +41,7 @@ import Communication from "@/assets/Industries/communication.jpg"
 import ITservices from "@/assets/Industries/itservices.jpg"
 import Edtech from "@/assets/Industries/edtech.jpg"
 import Retail from "@/assets/Industries/retail.jpg"
+import Svelte from "@/assets/expertise/svelte.png"
 
 
 
@@ -123,6 +124,10 @@ export const navLinks = [
       your online presence to new heights.`,
       icon: WebSVG,
       tech: [
+        {
+          id: "svelte",
+          icon: Svelte,
+        },
         {
           id: "typescript",
           icon: TypeScript

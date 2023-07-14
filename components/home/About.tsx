@@ -31,7 +31,7 @@ export default function About() {
           classNames="font-semibold text-center flex items-center justify-center"
           isActive={false}
           type="link"
-          href="/#about"
+          href="/about"
           title="Learn More"
         />
         <ButtonPrimary
