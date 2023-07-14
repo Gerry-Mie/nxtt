@@ -236,8 +236,8 @@ html{
 .bg-line {
   position: absolute;
   top: 50px;
-  left: -100px;
-  width: 110vw;
+  left: -300px;
+  width: 2000px;
   height: 100px;
   /* background-color: #24E02C; */
   overflow: hidden;
@@ -245,14 +245,15 @@ html{
 
 .sliding-text {
   position: absolute;
+  right: 0;
   white-space: nowrap;
   animation: slide 20s infinite linear;
 }
 .bg-line2 {
   position: absolute;
   top: 50px;
-  left: -100px;
-  width: 110vw;
+  left: -300px;
+  width: 2000px;
   height: 100px;
   background-color: transparent;
   overflow: hidden;
@@ -261,18 +262,29 @@ html{
 .sliding-text2 {
   position: absolute;
   white-space: nowrap;
-  animation: slide 10s infinite linear;
+  animation: slide2 10s infinite linear;
 }
 
-@keyframes slide {
+@keyframes slide2 {
   0% {
-    left: 15%;
+    left: 200px;
   }
   50%{
-    left: -15%;
+    left: -200px;
   }
   100% {
-    left: 15%;
+    left: 200px;
+  }
+}
+@keyframes slide {
+  0% {
+    left: -200px;
+  }
+  50%{
+    left: -600px;
+  }
+  100% {
+    left: -200px;
   }
 }
 
