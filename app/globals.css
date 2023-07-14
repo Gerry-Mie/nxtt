@@ -299,3 +299,10 @@ html{
 .glow {
   text-shadow: 0 0 1px white;
 }
+
+
+@media (min-width: 1920px) {
+  .layout{
+    max-width: 1536px;
+  }
+}
