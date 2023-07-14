@@ -74,6 +74,7 @@ html{
     --ring: 216 34% 17%;
  
     --radius: 0.5rem;
+    --success: 122° 70% 48%;
     
   }
 }
@@ -133,70 +134,6 @@ html{
   box-shadow: 6.510080814361572px 6.510080814361572px 22.785282135009766px 0px rgba(37, 219, 44, 0.32);
 }
 
-.circle-animation {
-  position: absolute;
-  top: 50%;
-  left: -250px; /* Initial position outside the left edge */
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(232deg, #24E02C 47.32%, #2E9132 100%);
-  animation: moveCircle 12s linear infinite;
-  transform-origin: 50% 50%; /* Set rotation origin to center of the circle */
-}
-
-@keyframes moveCircle {
-  0% {
-    transform: translate(-50%, -50%) translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translate(-50%, -50%) translateX(calc(100vw - 250px)) rotate(90deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateY(100vh) rotate(180deg);
-  }
-  75% {
-    transform: translate(-50%, -50%) translateX(-250px) rotate(270deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateY(0) rotate(360deg);
-  }
-}
-
-.circle-animation2 {
-  position: absolute;
-  top: -250px; /* Initial position outside the top edge */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(232deg, #24E02C 47.32%, #2E9132 100%);
-  animation: moveCircle2 12s linear infinite;
-  transform-origin: 50% 50%; /* Set rotation origin to center of the circle */
-}
-
-@keyframes moveCircle2 {
-  0% {
-    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
-  }
-  20% {
-    transform: translate(-50%, -50%) translateY(calc(100vh - 250px)) rotate(90deg);
-  }
-  40% {
-    transform: translate(-50%, -50%) translateY(0) translateX(calc(100vw - 250px)) rotate(180deg);
-  }
-  60% {
-    transform: translate(-50%, -50%) translateY(-100vh) translateX(calc(100vw - 250px)) rotate(270deg);
-  }
-  80% {
-    transform: translate(-50%, -50%) translateY(-100vh) translateX(0) rotate(360deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateY(0) translateX(0) rotate(0deg);
-  }
-}
-
 .gradient {
     background: linear-gradient(to right, #24E02C, #2E9132);
     background-clip: text;
@@ -237,7 +174,7 @@ html{
   position: absolute;
   top: 50px;
   left: -300px;
-  width: 2000px;
+  width: 2500px;
   height: 100px;
   /* background-color: #24E02C; */
   overflow: hidden;
@@ -253,7 +190,7 @@ html{
   position: absolute;
   top: 50px;
   left: -300px;
-  width: 2000px;
+  width: 2500px;
   height: 100px;
   background-color: transparent;
   overflow: hidden;
@@ -316,5 +253,37 @@ html{
 @media (min-width: 1920px) {
   .layout{
     max-width: 1536px;
+  }
+}
+
+.circle1{
+  animation: around 30s infinite linear;
+}
+
+
+@keyframes around {
+  0%{
+    right: -300px;
+    top: 100%;
+  }
+  20%{
+    top: -20%;
+    right: 110vw;
+  }
+  40%{
+    top: 100%;
+    right: 110vw;
+  }
+  60%{
+    top: -20%;
+    right: -300px;
+  }
+  80%{
+    top: 100%;
+    right: -300px;
+  }
+  100%{
+    top: -20%;
+    right: 110vw;
   }
 }

@@ -31,7 +31,7 @@ function Navbar() {
         id="nav"
         className={`${
           styles.paddingX
-        } fixed w-full flex items-center top-0 z-20 transition-padding duration-300 backdrop-blur-md ${
+        } fixed w-full flex items-center top-0 z-20 transition-padding duration-300 backdrop-blur-md bg-[#ffffff9a] ${
           scrolled ? "py-3 nav-shadow" : "py-5 "
         }`}
       >
@@ -55,7 +55,7 @@ function Navbar() {
                   key={link.id}
                   className={`${
                     active === link.id && "active-link"
-                  } gradient-text duration-300 glow`}
+                  } gradient-text duration-300`}
                   onClick={() => {
                     setActive(link.id);
                   }}
