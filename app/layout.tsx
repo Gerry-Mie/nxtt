@@ -49,8 +49,8 @@ export default function RootLayout(props: any) {
             {/* <div className="z-10 w-full items-center justify-between p-6 shadow-md font-mono text-sm lg:flex"> */}
             <Navbar />
             {/* </div> */}
-            <div className="max-w-screen-2xl m-auto">{props.children}</div>
-            {/* <Footer /> */}
+            <div className="w-full m-auto layout">{props.children}</div>
+             <Footer />
           </div>
         </Provider>
       </body>
