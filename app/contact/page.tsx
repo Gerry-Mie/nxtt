@@ -41,9 +41,13 @@ const ContactForm = () => {
         success={success}
         show={showModal}
         onHide={() => setShowModal(false)}
-        title="Sent"
-        message={`Thank you for contacting us! We appreciate your message and will respond promptly. Expect to hear from us soon.
-                  Warm Regards, Next Team`}
+        title={success ? "Sent" : "Failed"}
+        message={
+          success
+            ? `Thank you for contacting us! We appreciate your message and will respond promptly. Expect to hear from us soon.
+                  Warm Regards, Next Team`
+            : `We regret to inform you that we encountered an issue while attempting to send your message through our website's contact form. We apologize for the inconvenience caused. Please double-check your internet connection and try submitting your message again. If the problem persists, kindly contact us directly via email or phone to ensure your message reaches us. We appreciate your patience and understanding`
+        }
       />
       {/* <div className="absolute top-0 right-12 blur-2xl z-[-1] bg-blue-400 w-64 h-64 opacity-20 rounded-full" /> */}
       <div className="z-[-1] fixed w-full h-full pointer-events-none top-0 left-0 bg-[#ffffffad] backdrop-blur-3xl"></div>
