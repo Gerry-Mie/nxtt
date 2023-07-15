@@ -189,7 +189,7 @@ html{
 .bg-line2 {
   position: absolute;
   top: 50px;
-  left: -300px;
+  right: -300px;
   width: 2500px;
   height: 100px;
   background-color: transparent;
