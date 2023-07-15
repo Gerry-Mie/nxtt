@@ -1,58 +1,75 @@
 "use client";
 
 import React from "react";
-import logo from "@/assets/Nextlogo.png";
+import socialMediaIcons from '@/assets/social_media_icons.png'
+import nextLogoWhite from '@/assets/Next_logo_white.png'
 import Image from "next/image";
+import {navLinks} from "@/components/home/constants";
 
 const Footer = () => {
-  return (
-    <footer className="max-w-screen-xl m-auto flex justify-center mt-36">
-        <div className="w-[1512px] h-[370px] pt-[58px] bg-neutral-800 flex-col justify-center items-center gap-[69px] inline-flex">
-            <div className="w-[1440px] pl-[85px] pr-[120px] justify-between items-start gap-44 inline-flex">
-                <div className="flex-col justify-start items-start gap-[87px] inline-flex">
-                    <div className="w-[157.23px] h-[53px] relative">
-                        <div className="w-[157.23px] h-[49.17px] left-0 top-0 absolute">
+    return (
+        <footer className="w-full bg-neutral-800">
+            <div className="w-full m-auto layout flex py-14 justify-center items-center">
+                <div className="w-full max-w-6xl flex flex-col 2xl:flex-row justify-between items-center">
+                    <div
+                        className="flex-col justify-start items-start gap-[87px] inline-flex 2xl:flex-col 2xl:mb-0 mb-20 md:flex-row md:justify-between md:w-[750px]">
+                        <div>
+                            <Image src={nextLogoWhite} alt='' style={{width: 200}}/>
                         </div>
-                        <div className="w-[51.31px] h-[51.31px] left-[82.61px] top-[1.69px] absolute">
-                            <div className="w-[40.86px] h-[51.31px] left-[5.23px] top-0 absolute">
+                        <div className="flex-col justify-start items-start gap-3 flex">
+                            <div className="text-white text-lg font-medium leading-[20.97px] tracking-wide">Follow Us
                             </div>
-                            <div className="w-[51.31px] h-[40.86px] left-0 top-[5.23px] absolute">
+                            <div className="justify-start items-center gap-[22px] inline-flex">
+                                <Image src={socialMediaIcons} alt='' style={{width: 190}}/>
                             </div>
                         </div>
                     </div>
-                    <div className="flex-col justify-start items-start gap-3 flex">
-                        <div className="text-white text-lg font-medium leading-[20.97px] tracking-wide">Follow Us</div>
-                        <div className="justify-start items-center gap-[22px] inline-flex">
-                            <div className="w-[27.57px] h-[27.57px] relative">
+                    <div className="justify-between items-start gap-[50px] flex flex-col md:gap-[137px] md:flex-row">
+                        <div className="flex-col justify-start items-start gap-[15px] inline-flex 2xl:w-64">
+                            <div className="text-white text-xl font-semibold leading-normal tracking-wide">Pages</div>
+                            <div className="text-white text-base font-medium leading-7 tracking-tight">
+                                {navLinks.map((link) => (
+                                    <>
+                                        <a href={link.behavior === "scroll" ? `/#${link.id}` : `/${link.id}`}>
+                                            {link.title}
+                                        </a>
+                                        <br/>
+                                    </>
+
+                                ))}
                             </div>
-                            <div className="w-[27px] h-[27px] relative">
+                        </div>
+                        <div className="flex-col justify-start items-start gap-[15px] inline-flex">
+                            <div className="text-white text-base font-medium leading-7 tracking-tight">Privacy
+                                Policy <br/>Terms of Service link
+                            </div>
+                        </div>
+                        <div className="flex-col justify-start items-start gap-[15px] inline-flex">
+                            <div className="text-white text-xl font-semibold leading-normal tracking-wide">Contact
+                                Info
+                            </div>
+                            <div className="text-white text-base font-medium leading-normal tracking-tight">
+                                <a href="tel:+37477299653">+374 77 299653</a>
+                            </div>
+                            <div
+                                className="text-white text-base font-medium leading-normal tracking-tight">
+                                <a href="mailto:hello@nxttcorp.com">hello@nxttcorp.com</a>
+                            </div>
+                            <div
+                                className="w-[200.29px] text-white text-base font-medium leading-normal tracking-tight">Green
+                                heights Village, Parañaque City. PH
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="h-[206px] justify-between items-start gap-[137px] flex">
-                    <div className="flex-col justify-start items-start gap-[15px] inline-flex">
-                        <div className="text-white text-xl font-semibold leading-normal tracking-wide">Pages</div>
-                        <div className="text-white text-base font-medium leading-7 tracking-tight">Home<br/>Our Expertise<br/>Industries<br/>About us<br/>Blog<br/>Contact Us</div>
-                    </div>
-                    <div className="flex-col justify-start items-start gap-[15px] inline-flex">
-                        <div className="text-white text-base font-medium leading-7 tracking-tight">Privacy Policy <br/>Terms of Service link</div>
-                    </div>
-                    <div className="flex-col justify-start items-start gap-[15px] inline-flex">
-                        <div className="text-white text-xl font-semibold leading-normal tracking-wide">Contact Info</div>
-                        <div className="text-white text-base font-medium leading-normal tracking-tight">+374 77 299653</div>
-                        <div className="text-white text-base font-medium leading-normal tracking-tight">hello@nxttcorp.com</div>
-                        <div className="w-[200.29px] text-white text-base font-medium leading-normal tracking-tight">Green heights Village, Parañaque City. PH </div>
-                    </div>
+            </div>
+            <div className="py-2 bg-black w-full flex justify-center items-center">
+                <div className="text-white text-sm font-normal leading-tight tracking-tight">© Next Technologies Corp.
+                    2023
                 </div>
             </div>
-            <div className="self-stretch px-[120px] py-2 bg-black justify-between items-center gap-[733px] inline-flex">
-                <div className="text-white text-sm font-normal leading-tight tracking-tight">© Next Technologies Corp. 2023</div>
-                <div className="text-white text-sm font-normal leading-tight tracking-tight">Cookie policy           Cookie settings</div>
-            </div>
-        </div>
-    </footer>
-  );
+        </footer>
+    );
 };
 
 export default Footer;
