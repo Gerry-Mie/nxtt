@@ -29,12 +29,12 @@ const Footer = () => {
                             <div className="text-white text-xl font-semibold leading-normal tracking-wide">Pages</div>
                             <div className="text-white text-base font-medium leading-7 tracking-tight">
                                 {navLinks.map((link) => (
-                                    <>
+                                    <React.Fragment key={link.id}>
                                         <a href={link.behavior === "scroll" ? `/#${link.id}` : `/${link.id}`}>
                                             {link.title}
                                         </a>
                                         <br/>
-                                    </>
+                                    </React.Fragment>
 
                                 ))}
                             </div>
