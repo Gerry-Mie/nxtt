@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const Blog = () => {
   const tempoObject = [0, 1, 2, 3, 4, 5, 6, 7];
   return (
-    <div className="h-screen p-10 relative mt-[83px] flex flex-wrap justify-center gap-12">
+    <div className="p-10 relative mt-[83px] flex flex-wrap justify-center gap-12">
       {tempoObject.map(() => (
         <div className="z-0">
           <div className="w-[296px] h-[301px] border-2 border-[#080e42] opacity-[0.1] rounded"></div>
         </div>
       ))}
 
-      <div className="z-[1] fixed top-0 left-0 flex items-center flex-col justify-center w-full h-full">
+      <div className="z-[1] absolute top-0 left-0 flex items-center flex-col justify-center w-full h-screen lg:h-full">
         <AnimatePresence>
           <motion.p
             variants={{
