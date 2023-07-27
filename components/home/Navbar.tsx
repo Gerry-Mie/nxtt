@@ -9,6 +9,7 @@ import { styles } from "@/components/styles";
 import LogoHeader from "@/assets/LogoHeader";
 import ButtonPrimary from "../ButtonPrimary";
 import { Helmet } from "react-helmet";
+import NextLogov2 from "@/assets/newLogo/NEXT_Logo_ver02Final-04-2.png";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -44,7 +45,8 @@ function Navbar() {
             }}
           >
             <div className="w-fit h-fit object-contain">
-              <LogoHeader />
+              {/* <LogoHeader /> */}
+              <Image src={NextLogov2} alt="NEXT" style={{ width: 126 }} />
             </div>
           </Link>
 
