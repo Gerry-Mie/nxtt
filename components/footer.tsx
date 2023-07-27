@@ -1,10 +1,13 @@
 "use client";
 
 import React from "react";
-import socialMediaIcons from '@/assets/social_media_icons.png'
 import nextLogoWhite from '@/assets/Next_logo_white.png'
 import Image from "next/image";
 import {navLinks} from "@/components/home/constants";
+import fb_logo from '@/assets/social_media/FB_White.png'
+import instagram_logo from '@/assets/social_media/Instagram_white.png'
+import linkedIn_logo from '@/assets/social_media/LinkedIn_white.png'
+import threads_logo from '@/assets/social_media/Threads_white.png'
 
 const Footer = () => {
     return (
@@ -19,8 +22,19 @@ const Footer = () => {
                         <div className="flex-col justify-start items-start gap-3 flex">
                             <div className="text-white text-lg font-medium leading-[20.97px] tracking-wide">Follow Us
                             </div>
-                            <div className="justify-start items-center gap-[22px] inline-flex">
-                                <Image src={socialMediaIcons} alt='' style={{width: 160}}/>
+                            <div className="justify-start items-center gap-5 inline-flex">
+                                <a href='https://www.facebook.com/nexttechnologiescorp' target='_blank'>
+                                    <Image src={fb_logo} alt='' width={25} height={25}/>
+                                </a>
+                                <a href='https://www.instagram.com/_nexttech2023/' target='_blank'>
+                                    <Image src={instagram_logo} alt='' width={25} height={25}/>
+                                </a>
+                                <a href='https://www.linkedin.com/in/next-technologies-182929282/' target='_blank'>
+                                    <Image src={linkedIn_logo} alt='' width={25} height={25}/>
+                                </a>
+                                <a href='https://www.threads.net/@_nexttech2023' target='_blank'>
+                                    <Image src={threads_logo} alt='' width={25} height={25}/>
+                                </a>
                             </div>
                         </div>
                     </div>

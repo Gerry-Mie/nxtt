@@ -57,20 +57,20 @@ const ContactForm = () => {
                         <div className="flex flex-col gap-3">
                             <label>
                                 <p className="ml-4 mb-1">Email</p>
-                                <Input {...f.register("email")} />
+                                <Input required  {...f.register("email")} />
                             </label>
                             <label>
                                 <p className="ml-4 mb-1 mt-2">Name</p>
-                                <Input {...f.register("name")} />
+                                <Input required {...f.register("name")} />
                             </label>
                             <label>
                                 <p className="ml-4 mb-1 mt-2">Subject</p>
-                                <Input {...f.register("Title")} />
+                                <Input required {...f.register("Title")} />
                             </label>
 
                             <label>
                                 <p className="ml-4 mb-1 mt-2">Message</p>
-                                <Textarea {...f.register("content")} />
+                                <Textarea required {...f.register("content")} />
                             </label>
                             <div className='mt-5'>
                                 {mutation.isError && (
