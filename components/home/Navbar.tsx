@@ -1,15 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { navLinks } from "./constants";
 import MenuSvg from "@/assets/MenuSvg";
 import CloseSvg from "@/assets/CloseSvg";
 import { styles } from "@/components/styles";
-import LogoHeader from "@/assets/LogoHeader";
 import ButtonPrimary from "../ButtonPrimary";
-import { Helmet } from "react-helmet";
-import NextLogov2 from "@/assets/NEXT_Logo_ver02Final-04-2.png";
+import LogoHeader from "@/assets/newLogo/LogoHeader";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -45,8 +42,7 @@ function Navbar() {
             }}
           >
             <div className="w-fit h-fit object-contain">
-              {/* <LogoHeader /> */}
-              <Image src={NextLogov2} alt="" style={{ width: 126 }} />
+              <LogoHeader />
             </div>
           </Link>
 
