@@ -3,13 +3,14 @@ import React from "react";
 import { styles } from "../styles";
 import ButtonPrimary from "../ButtonPrimary";
 import LogoBG from "@/assets/about/LogoBG";
+import NextOpacity from "@/assets/newLogo/NextOpacity";
 
 export default function About() {
   return (
     // todo remove padding bottom after footer fixed
     <section className="relative w-full h-fit mx-auto mt-20 min-h-[300px] flex flex-col items-center gap-10 pb-20">
-      <div className="absolute top-0 max-w-full pointer-events-none">
-        <LogoBG />
+      <div className="absolute top-[-20px] max-w-full pointer-events-none">
+        <NextOpacity />
       </div>
 
       <div className="flex flex-col items-center gap-8 w-full lg:w-[70%] px-10">
