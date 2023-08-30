@@ -83,10 +83,10 @@ const Footer = () => {
                 Contact Info
               </div>
               <div className="text-white text-base font-medium leading-normal tracking-tight">
-                <a href="tel:+37477299653">+63927 293 3558</a>
+                <a href="tel:+639272933558">+63927 293 3558</a>
               </div>
               <div className="text-white text-base font-medium leading-normal tracking-tight">
-                <a href="tel:+37477299653">+63906 471 4413</a>
+                <a href="tel:+639064714413">+63906 471 4413</a>
               </div>
               <div className="text-white text-base font-medium leading-normal tracking-tight">
                 <a href="mailto:hello@nxttcorp.com">hello@nxttcorp.com</a>
